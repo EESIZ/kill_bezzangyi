@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for improving unlazy. Keep changes focused, testable, portable, and honest about their evidence.
+Thanks for improving Kill_bezzangyi. Keep changes focused, testable, portable, and honest about their evidence.
 
 ## Welcome changes
 

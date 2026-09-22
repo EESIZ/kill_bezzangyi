@@ -1,9 +1,9 @@
 ---
-name: unlazy
-description: Enforces completion discipline for substantial autonomous work by writing acceptance gates before execution, decomposing work with the Depth Tree, running approved checks, and re-verifying evidence before reporting. Use when an agent faces a long or multi-part task, work that has returned half-done, an exhaustive audit or build, parallel leaves or pipelines, or explicit triggers such as /unlazy, $unlazy, "tree N", "gates", and "do not stop until it is done".
+name: kill-bezzangyi
+description: Enforces completion discipline for substantial autonomous work by writing acceptance gates before execution, decomposing work with the Depth Tree, running approved checks, and re-verifying evidence before reporting. Use when an agent faces a long or multi-part task, work that has returned half-done, an exhaustive audit or build, parallel leaves or pipelines, or explicit triggers such as /kill-bezzangyi, $kill-bezzangyi, "tree N", "gates", and "do not stop until it is done".
 ---
 
-# Unlazy
+# Kill_bezzangyi
 
 Make incomplete work visible and make completion testable. Prove outcomes against a ledger instead of relying on a confident done report.
 
