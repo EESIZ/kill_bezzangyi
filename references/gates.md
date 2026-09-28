@@ -1,5 +1,11 @@
 # Gate file format
 
+For new minimal-profile work, `minimal-verification.md` adds driver-owned
+acceptance receipts and current-input auditing. The parser and approval rules
+below remain unchanged. The inherited `--reverify` requirement applies when a
+fresh official execution is needed; a current driver-owned receipt can satisfy
+the same unchanged obligation at an ancestor. `--status` is not that receipt audit.
+
 A gate ledger is a machine-checked completion contract. The checker and Stop hook use the same strict parser. Invalid structure fails closed instead of producing a completion certificate.
 
 ## Minimal format

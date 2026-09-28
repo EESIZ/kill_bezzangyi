@@ -78,4 +78,8 @@ Describe results for the tested models, snapshots, tasks, and environments. Do n
 
 ## Repository-level validation
 
+For the fork-specific unlazy versus Kill_bezzangyi comparison, see [the comparison protocol](comparison-protocol.md). It separates matched-state coordination from end-to-end outcomes and counts preparation, child agents, retries, and recovery. This is a measurement design, not an executed benchmark result.
+
+The subsequent 2026-09-23 isolated-container pilot is documented in [the measured results](comparison-results-20260923.md). It comprises 32 end-to-end trials and 32 matched-state decision trials; its limited workloads, cache accounting, and lack of native Claude Stop-hook execution are stated explicitly.
+
 The current implementation has a separate deterministic test suite for parser, checker, lease, hook, installer, and portability behavior. Run it with the repository's documented test command. Those software tests validate implementation behavior; they do not validate broad claims about model psychology or task productivity.

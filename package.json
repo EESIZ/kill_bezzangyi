@@ -5,7 +5,10 @@
   "description": "Kill_bezzangyi completion discipline and zero-dependency verification tools",
   "type": "module",
   "scripts": {
-    "test": "node tests/run-tests.mjs && node tests/dispatch-tests.mjs && node tests/hardening-tests.mjs && node tests/stress-tests.mjs && node tests/lint-tests.mjs && node tests/contract-tests.mjs && node tests/self-check.mjs"
+    "test": "node tests/verification-tests.mjs && node tests/handoff-tests.mjs && node tests/structure-tests.mjs && node tests/schedule-tests.mjs && node tests/run-tests.mjs && node tests/dispatch-tests.mjs && node tests/hardening-tests.mjs && node tests/stress-tests.mjs && node tests/lint-tests.mjs && node tests/contract-tests.mjs && node tests/self-check.mjs",
+    "test:schedule": "node tests/schedule-tests.mjs",
+    "test:structure": "node tests/structure-tests.mjs",
+    "test:handoff": "node tests/handoff-tests.mjs"
   },
   "engines": {
     "node": ">=16"
