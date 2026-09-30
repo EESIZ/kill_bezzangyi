@@ -74,7 +74,7 @@ W_i\cap W_j=\varnothing
 $$
 
 $$
-\operatorname{Independent}(i,j)
+\mathrm{Independent}(i,j)
 \iff B(i,j)\land\neg(i\leadsto j)\land\neg(j\leadsto i)
 $$
 
@@ -87,8 +87,8 @@ $$
 $D_t$는 검증을 마친 작업, $U_t$는 아직 끝나지 않았고 현재 실행 중도 아닌 작업, $L_t$는 작업 영역의 점유권을 아직 놓지 않은 작업입니다.
 
 $$
-Q_t=\{v\in U_t:\operatorname{Pred}(v)\subseteq D_t
-\land \operatorname{Pred}(v)\cap L_t=\varnothing\}
+Q_t=\{v\in U_t:\mathrm{Pred}(v)\subseteq D_t
+\land \mathrm{Pred}(v)\cap L_t=\varnothing\}
 $$
 
 즉, 선행 작업의 검증과 점유권 해제가 모두 끝나야 다음 작업의 후보가 됩니다. 스크립트는 작업 ID 순서로 후보를 살펴보고, 실행 중인 작업 및 이미 고른 후보와 충돌하지 않는 작업을 남은 자리만큼 선택합니다.
@@ -106,7 +106,7 @@ $S_t$는 새로 배정할 작업, $A_t$는 실행 중인 작업, $k$는 동시 �
 $\mathcal P$는 작업을 나눈 그룹들의 집합입니다. 각 그룹을 하나의 점으로 본 그래프 $G/\mathcal P$에도 순환이 없어야 합니다. 합칠 그룹 $M$ 안에서 아직 끝나지 않은 작업끼리는 선후관계가 있어야 합니다.
 
 $$
-\operatorname{DAG}(G/\mathcal P')
+\mathrm{DAG}(G/\mathcal P')
 \quad\land\quad
 \forall u\ne v\in M_{\mathrm{unfinished}},
 \;(u\leadsto v)\lor(v\leadsto u)
@@ -130,7 +130,7 @@ $$
 d(v)=
 \begin{cases}
 0 & \text{if no split is recorded for }v\\
-1+\max_{c\in\operatorname{children}(v)}d(c) & \text{otherwise}
+1+\max_{c\in\mathrm{children}(v)}d(c) & \text{otherwise}
 \end{cases}
 $$
 
@@ -165,8 +165,8 @@ $$
 검증 기록을 남긴 검사에 대해 다음 조건을 확인합니다.
 
 $$
-\operatorname{Reuse}
-=\operatorname{Accepted}\land\operatorname{Closed}\land\operatorname{AllGatesMet}
+\mathrm{Reuse}
+=\mathrm{Accepted}\land\mathrm{Closed}\land\mathrm{AllGatesMet}
 \land(H_{\mathrm{context}}=H_{\mathrm{saved}})
 \land(H_{\mathrm{ledger}}=H_{\mathrm{savedLedger}})
 $$

@@ -74,7 +74,7 @@ W_i\cap W_j=\varnothing
 $$
 
 $$
-\operatorname{Independent}(i,j)
+\mathrm{Independent}(i,j)
 \iff B(i,j)\land\neg(i\leadsto j)\land\neg(j\leadsto i)
 $$
 
@@ -87,8 +87,8 @@ Two tasks may read the same input. They cannot independently modify the same res
 Let $D_t$ be verified tasks, $U_t$ unfinished tasks not currently active, and $L_t$ tasks still holding an ownership lease.
 
 $$
-Q_t=\{v\in U_t:\operatorname{Pred}(v)\subseteq D_t
-\land \operatorname{Pred}(v)\cap L_t=\varnothing\}
+Q_t=\{v\in U_t:\mathrm{Pred}(v)\subseteq D_t
+\land \mathrm{Pred}(v)\cap L_t=\varnothing\}
 $$
 
 The scheduler scans candidates in stable task-ID order. It selects mutually independent tasks that also avoid active-task and lease conflicts, subject to:
@@ -106,7 +106,7 @@ Here $S_t$ is the new selection, $A_t$ the active set, and $k$ the slot limit. S
 Let $\mathcal P$ partition the tasks into groups, and $G/\mathcal P$ be the graph whose nodes are those groups. A proposed merge must preserve an acyclic group graph. Within the merged group $M$, every pair of distinct unfinished tasks must have a dependency order:
 
 $$
-\operatorname{DAG}(G/\mathcal P')
+\mathrm{DAG}(G/\mathcal P')
 \quad\land\quad
 \forall u\ne v\in M_{\mathrm{unfinished}},
 \;(u\leadsto v)\lor(v\leadsto u)
@@ -130,7 +130,7 @@ $$
 d(v)=
 \begin{cases}
 0 & \text{if no split is recorded for }v\\
-1+\max_{c\in\operatorname{children}(v)}d(c) & \text{otherwise}
+1+\max_{c\in\mathrm{children}(v)}d(c) & \text{otherwise}
 \end{cases}
 $$
 
@@ -163,8 +163,8 @@ A reused ID with a different payload is rejected. New structural events advance 
 For receipt-backed acceptance, the core audit rule is:
 
 $$
-\operatorname{Reuse}
-=\operatorname{Accepted}\land\operatorname{Closed}\land\operatorname{AllGatesMet}
+\mathrm{Reuse}
+=\mathrm{Accepted}\land\mathrm{Closed}\land\mathrm{AllGatesMet}
 \land(H_{\mathrm{context}}=H_{\mathrm{saved}})
 \land(H_{\mathrm{ledger}}=H_{\mathrm{savedLedger}})
 $$
